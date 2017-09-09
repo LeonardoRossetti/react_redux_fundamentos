@@ -1,6 +1,6 @@
 # Criação do projeto
 
-### Criar o packaje.json padrão
+### Criar o package.json padrão
 ```
 npm init -y
 ```
@@ -31,9 +31,12 @@ npm i --save-dev body-parser@1.15.2 express@4.14.0 mongoose@4.7.0 node-restful@0
 	 "main": "src/loader.js" 
 	//'project_backend' é o nome que vai aparecer no painel de monitoramento do PM2
 	 "scripts": {
-		"dev": "nodemon",
-		"production": "pm2 start src/loader.js --name project_backend" 
+		"dev": "nodemon", //npm run dev
+		"production": "pm2 start src/loader.js --name project_backend"  //npm run production
 	}
 	```
-* Criado o arquivo .gitignore
-* Cria a pasta **src** e dentro dela o arquivo **loader.js**
+* Criado o arquivo **.gitignore**
+* Criado arquivo **src/loader.js**
+* Criado o arquivo **src/config/server.js**
+
+
