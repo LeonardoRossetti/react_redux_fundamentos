@@ -11,13 +11,13 @@ Serve para fazer o parser dos formulários e dos objetos json das requisições 
 #### Express
 [Express](http://expressjs.com/) é um framework web.
 #### Mongoose
-Ele é o responsável por fazer a conexão com o banco de dados. Ele faz o mapeamento objeto-documento
+[Mongoose](http://mongoosejs.com/) é o responsável por fazer a conexão com o banco de dados. Ele faz o mapeamento objeto-documento
 #### Node-restful
-Serve para facilitar a criação dos webservices
+[Node-restful](https://github.com/baugarten/node-restful) Serve para facilitar a criação dos webservices
 #### PM2
-Vamos startar a aplicação atravez dele. Ele controla a nossa aplicação, uso de memória/processador. Caso a aplicação caia, ele restarta a aplicação de novo.
+[PM2](http://pm2.keymetrics.io/) controla a nossa aplicação, o uso de memória/processador. Caso a aplicação caia, ele restarta a aplicação de novo. Vamos startar a aplicação atravez dele. 
 #### Nodemon
-Nodemon faz praticamente a mesma coisa que o PM2, porém é menos robusto, vamos usá-lo apenas durante o desenvolvimento.
+[Nodemon](https://nodemon.io/) faz praticamente a mesma coisa que o PM2, porém é menos robusto, vamos usá-lo apenas durante o desenvolvimento.
 
 ```
 npm i --save-dev body-parser@1.15.2 express@4.14.0 mongoose@4.7.0 node-restful@0.2.5 pm2@2.1.5 nodemon@1.11.0
