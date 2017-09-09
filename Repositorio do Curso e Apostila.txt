@@ -1,0 +1,5 @@
+Repositório do curso: https://github.com/cod3rcursos/curso-react-redux
+
+Baixe também a apostila do curso!
+
+Apostila do Curso (Versão BETA): http://files.cod3r.com.br/apostila-react-redux.pdf

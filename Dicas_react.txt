@@ -1,0 +1,29 @@
+
+
+INICIANDO O PROJETO
+
+Comands:
+	> npm init -y //cria o packaje.json padrão
+	> npm i --save-dev react@15.4.2	react-dom@15.4.2 babel-core@6.22.1 babel-loader@6.2.10 babel-preset-es2015@6.22.0 babel-preset-react@6.22.0 webpack@1.14.0 webpack-dev-server@1.16.2 //baixa as dependencias do react
+		esse comando também vai adicionar ao package.json o conteúdo:
+			  "devDependencies": {
+				"babel-core": "^6.22.1",
+				"babel-loader": "^6.2.10",
+				"babel-preset-es2015": "^6.22.0",
+				"babel-preset-react": "^6.22.0",
+				"react": "^15.4.2",
+				"react-dom": "^15.4.2",
+				"webpack": "^1.14.0",
+				"webpack-dev-server": "^1.16.2"
+			  }
+	> Criar o arquivo ".gitignore" para garantir que a pasta node_modules não será enviada para o git; Conteúdo do arquivo:
+		node_modules
+		*.log
+	
+	IMPORTANTE: 
+		> Sempre que execuamos uma versão de instalar, "npm i --save-dev" o package.json é atualizado colocando a versão como dependencia
+		> Não necessáriamente precisa especificar a versão, porém no curso foi feito assim para nao quebras as compatibilidades.	
+		
+		> Qualquer componente do react obrigatoriamente deve retornar apenas um componente. Para retornar um componente mais complexo, que contanha mais de um componente dentro dele, é necessário agrupa-los dentro de um único componente e retornar esse componente que agrupa os demais.
+		
+		> Conceito de controled: quando o estado dos seus componentes são controlados dentro do seu componente, e não na view, não na DOM. Contrário de uncontroled.

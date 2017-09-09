@@ -1,0 +1,72 @@
+Para montar o ambiente:
+	Instalar o MongoDB;
+	Instalar o NodeJs (Sempre pegar a LTS que é a mais estável);
+	Instalar o Cmder (http://cmder.net/), pois ele já vem com o Git instalado, não vai precisar baixar por fora.
+	Colocar o caminho da pasta 'bin' do mongodb no path das variaveis de ambiente;
+	Criar a pasta 'c:/data/db' e rodar o comando mongod; (isso vai startar o mongo)
+
+	
+Iniciando o projeto:
+	> mkdir <nome_pasta> && cd <nome_pasta> //cria e entra na pasta
+	> npm init -y	//cria o arquivo packaje.json
+	> npm i --save-dev webpack@1.14.0 webpack-dev-server@1.16.2 	//instalar o webpack (pode ser a ultima versão);
+	> Criar o arquivo ".gitignore" para garantir que a pasta node_modules não será enviada para o git; Conteúdo do arquivo:
+		node_modules
+		*.log
+	> Criar arquivo 'webpack.config.js' que é o arquivo base da nossa aplicação. Aqui configuramos o arquivo de entrada da nossa aplicação, a porta onde será executado no browser.
+		Ele também configura onde será gerado o arquivo bundle.js.
+	> Para criar o arquivo físico do bundle.js, executar: ./node_modules/.bin/webpack
+		Também serve para atualizar o bundle.js
+	> Para usar o babel: npm i --save-dev babel-core@6.22.1 babel-loader@6.2.10 babel-preset-es2015@6.22.0
+	> Para instalar o plugin do spread no babel, para poder executar funções especificas do react:
+		npm i --save-dev babel-plugin-transform-object-rest-spread@6.22.0	
+		Com isso podemos utilizar por exemplo essa operação "..." que faz com que um objeto seja clonado:
+		function clone(objeto) {
+			return { ...objeto } //cria outro objeto igual ao recebido por parametro e o retorna.
+		}
+	> Para instalar o react: npm i --save-dev react@15.4.2 
+	> Para que a sintaxe especifica do react seja compreendida é necessário adicionar o preset do react dentro do webpack e baixar a dependencia:
+		npm i --save-dev babel-preset-react@6.22.0
+
+	> Dentro do webpack.config.js tem um fonte que especifica o que irá acontecer com os arquivos da aplicação, no exemplo que segue está descrito como devem ser compilador os arquivos com extensão .js:
+		//nesse caso é descrito que os arquivos .js devem ser compilados com es2015 e react e o babel possui um plugin spread.
+		//os arquivos da pasta node_modules devem ser ignorados
+		module: {
+			loaders: [{
+				test: /.js?$/,
+				loader: 'babel-loader',
+				exclude: /node_modules/,
+				query: {
+					presets: ['es2015', 'react'],
+					plugins: ['transform-object-rest-spread']
+				}
+			}]
+		}
+	> Para que o compilador entenda os arquivos css é necessário criar um loader para css, criar a referencia deste e baixar as dependencias:
+		npm i --save-dev extract-text-webpack-plugin@1.0.1 style-loader@0.13.1 css-loader@0.26.1
+		
+	
+	
+	IMPORTANTE: 
+		> Sempre que execuamos uma versão de instalar, "npm i --save-dev" o package.json é atualizado colocando a versão como dependencia
+		> Não necessáriamente precisa especificar a versão, porém no curso foi feito assim para nao quebras as compatibilidades.
+
+
+Atalhos:
+ Dentro do cmder: 
+ > code .   	//isso vai abrir o VSCode;
+ 
+ > npm i    	//baixar as dependencias;
+ 
+ > npm run dev  //startar o nosso backend; 
+	ou ainda > npm run production 	//para startar com PM2;
+ 
+ > npm run dev	//startar o nosso frontend; (faz o transpiler da aplicação, gera os arquivos Javascript, CSS. Prepara a aplicação para podermos acessá-la do browser)
+ 
+ 
+				
+
+ 
+ 
+ 
+ 
