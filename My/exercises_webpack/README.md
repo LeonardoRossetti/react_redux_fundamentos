@@ -9,7 +9,7 @@ npm init -y
 #### Body-parser
 Serve para fazer o parser dos formulários e dos objetos json das requisições que vamos receber para objeto javascript.
 #### Express
-É um framework web.
+[Express](http://expressjs.com/) é um framework web.
 #### Mongoose
 Ele é o responsável por fazer a conexão com o banco de dados. Ele faz o mapeamento objeto-documento
 #### Node-restful
