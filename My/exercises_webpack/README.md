@@ -26,10 +26,10 @@ npm i --save-dev body-parser@1.15.2 express@4.14.0 mongoose@4.7.0 node-restful@0
 
 ## Passo a passo 
 * Alterar o packaje.json: 
- * "main": "src/loader.js" //esse é o arquivo que vai startar a nossa aplicação
- * "scripts": {
-     "dev": "nodemon",
-     "production": "pm2 start src/loader.js --name project_backend" //'project_backend' é o nome que vai aparecer no painel de monitoramento do PM2
- }
+	* "main": "src/loader.js" //esse é o arquivo que vai startar a nossa aplicação
+	* "scripts": {
+		"dev": "nodemon",
+		"production": "pm2 start src/loader.js --name project_backend" //'project_backend' é o nome que vai aparecer no painel de monitoramento do PM2
+	}
 * Criado o arquivo .gitignore
 * Cria a pasta **src** e dentro dela o arquivo **loader.js**
