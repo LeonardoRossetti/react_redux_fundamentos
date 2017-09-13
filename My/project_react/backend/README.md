@@ -38,5 +38,8 @@ npm i --save-dev body-parser@1.15.2 express@4.14.0 mongoose@4.7.0 node-restful@0
 * Criado o arquivo **.gitignore**
 * Criado arquivo **src/loader.js**
 * Criado o arquivo **src/config/server.js**
-
-
+* Criado o arquivo **src/api/todo/todo.js**
+* Criado o arquivo **src/api/todo/todoService.js**
+* Criado o arquivo **src/api/config/database.js**
+* Criado o arquivo **src/api/config/routes.js**
+* Baixamos o [Postman](https://www.getpostman.com/)
