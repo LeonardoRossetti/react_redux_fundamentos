@@ -5,11 +5,16 @@ const bodyParser = require('body-parser')
 //express é um servidor web que roda em cima do nodeJs
 const express = require('express')
 const server = express()
+const allowCors = require('./cors')
 
-/*ativando a função extended e assim mais padrões de dados 
-serão aceitos*/
+/**
+ * Ativando a função extended e assim mais padrões de dados 
+ * serão aceitos.
+ * 
+ */
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
+server.use(allowCors)
 
 /*O Express funciona como um middleware. 
 É como se vc tivesse trabalhando com uma cadeia de requisições

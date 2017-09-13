@@ -67,3 +67,4 @@ npm i --save-dev body-parser@1.15.2 express@4.14.0 mongoose@4.7.0 node-restful@0
     Isso irá também aplicar um regex e trazer apenas os registros cuja descrição contenha a palavra 'conta'
 * Para mais exemplos consultar a documentação do [NodeRestfull](https://github.com/baugarten/node-restful)
 
+* Criado o arquivo **src/config/cors.js** e feita chamada para ele dentro do **ser/config/server.js**
