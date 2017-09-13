@@ -55,14 +55,15 @@ npm i --save-dev body-parser@1.15.2 express@4.14.0 mongoose@4.7.0 node-restful@0
     * Ao clicar em Send será inserido o registro
 * PUT
     * http://localhost:3004/api/Todos/:id (Modo PUT para alterar um registro, ID é o parametro)
-    Ir em Body -> Selecionar: x-www.form-urlencoded
+    <br>Ir em Body -> Selecionar: x-www.form-urlencoded
     * Selecionar Bulk-edit (para inserir os comandos manualmente)
     inserir: 
     done: true
     description: Atualizada
 * GET
-    http://localhost:3004/api/Todos?sort=-createdAt
+    * http://localhost:3004/api/Todos?sort=-createdAt
     Isso irá retornar os registros de forma descrescente pela data de inserção
-    <br>
-    http://localhost:3004/api/Todos?sort=-createdAt&description__regex=/conta/
+    * http://localhost:3004/api/Todos?sort=-createdAt&description__regex=/conta/
     Isso irá também aplicar um regex e trazer apenas os registros cuja descrição contenha a palavra 'conta'
+* Para mais exemplos consultar a documentação do [NodeRestfull](https://github.com/baugarten/node-restful)
+
