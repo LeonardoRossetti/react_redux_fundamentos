@@ -63,6 +63,6 @@ npm i --save-dev body-parser@1.15.2 express@4.14.0 mongoose@4.7.0 node-restful@0
 * GET
     http://localhost:3004/api/Todos?sort=-createdAt
     Isso irá retornar os registros de forma descrescente pela data de inserção
-    \n
+    <br>
     http://localhost:3004/api/Todos?sort=-createdAt&description__regex=/conta/
     Isso irá também aplicar um regex e trazer apenas os registros cuja descrição contenha a palavra 'conta'
