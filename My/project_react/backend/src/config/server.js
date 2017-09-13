@@ -1,4 +1,4 @@
-const port = 3003
+const port = 3004
 
 //ele que faz a conversão das requisições
 const bodyParser = require('body-parser')
@@ -9,6 +9,7 @@ const server = express()
 /*ativando a função extended e assim mais padrões de dados 
 serão aceitos*/
 server.use(bodyParser.urlencoded({ extended: true }))
+server.use(bodyParser.json())
 
 /*O Express funciona como um middleware. 
 É como se vc tivesse trabalhando com uma cadeia de requisições
@@ -20,3 +21,5 @@ recebidas no nosso servidor passarão por esse middleware
 server.listen(port, function(){
     console.log(`BACKEND is running on port ${port}.`)
 })
+
+module.exports = server
