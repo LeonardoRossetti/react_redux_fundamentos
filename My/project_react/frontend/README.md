@@ -5,7 +5,7 @@
 npm init -y
 ```
 
-##Instalar dependencias
+## Instalar dependencias
 * Webpack
 ```
 npm i --save-dev webpack@1.14.0 webpack-dev-server@1.16.2
@@ -31,3 +31,5 @@ O Axios é o que faz a parte de consumir a aplicação backend
 ```
 npm i --save-dev react@15.4.2 react-dom@15.4.2 react-router@3.0.2 axios@0.15.3
 ```
+## Passo a passo
+* Criado o arquivo **webpack.config.js**
